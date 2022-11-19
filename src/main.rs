@@ -1,6 +1,8 @@
+mod components;
 mod html_labels;
 
-use html_labels::{get_vedio_lists, Video};
+use components::VideosList;
+use html_labels::get_vedio_lists;
 use yew::prelude::*;
 fn main() {
     yew::start_app::<App>();
@@ -28,6 +30,9 @@ fn app() -> Html {
 
                 <h4>{"Group2"}</h4>
                 {videos}
+
+                <h4>{"Group3"}</h4>
+                                <VideosList videos = {get_vedio_lists()}/>
             </div>
             <div>
                 <h3>{ "John Doe: Building and breaking things" }</h3>

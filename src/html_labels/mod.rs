@@ -1,3 +1,4 @@
+#[derive(Clone, PartialEq)]
 pub struct Video {
     pub id: usize,
     pub title: String,
